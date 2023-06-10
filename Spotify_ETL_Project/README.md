@@ -1,4 +1,4 @@
-# Music Data Pipeline with Spotify API
+# Spotify API Music Data Pipeline Using AWS
 
 This project is an implementation of a data pipeline to collect and store music data from the Spotify API. The aim is to gather data about songs, albums, and artists to conduct a deep analysis and get insights into the music trends and preferences.
 
