@@ -23,8 +23,6 @@ image here
 
 - `main.py`: The main driver script that coordinates the execution of the pipeline.
 - `data_extraction.py`: This script handles the data extraction process from the Spotify API.
-- `data_transformation.py`: This script is used to transform the data into a suitable format for the data warehouse.
-- `data_loading.py`: This script loads the transformed data into the data warehouse.
 
 ## Detailed Explanation
 
