@@ -9,6 +9,8 @@ The data pipeline architecture is based on [Darshil's work](https://github.com/d
 ## Business Requirement
 
 ## Data Source
+[Top Song - Global](https://open.spotify.com/playlist/37i9dQZEVXbNG2KDcFcKOF)
+![image](https://github.com/irenejiazhou/Data-Engineering-Projects/assets/57390524/5033f37a-1755-4ba9-9fd6-53427f377d3c)
 
 
 ## ETL Architecture
