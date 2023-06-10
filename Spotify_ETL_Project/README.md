@@ -21,7 +21,7 @@ image here
 
 ## Project Structure
 
-- `main.py`: The main driver script that coordinates the execution of the pipeline.
+- [`main.py`](https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Spotify_ETL_Project/ETL_Project_Spotify_API.ipynb): The main driver script that coordinates the execution of the pipeline.
 - `data_extraction.py`: This script handles the data extraction process from the Spotify API.
 
 ## Detailed Explanation
