@@ -9,13 +9,18 @@ The data pipeline architecture is based on [Darshil's work](https://github.com/d
 ## Business Requirement
 
 ## Data Source
-[Top Song - Global](https://open.spotify.com/playlist/37i9dQZEVXbNG2KDcFcKOF)
+[Spotify - Top Song - Global](https://open.spotify.com/playlist/37i9dQZEVXbNG2KDcFcKOF)
 <br>
 <img src="https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Spotify_ETL_Project/Others/Spotify_Top_Songs_Global.png"  width="40%" height="40%">
 
 
 ## ETL Architecture
-image here
+### Extract
+- [Spotify API](https://developer.spotify.com/dashboard)
+
+  Redirect URIs: http://localhost:3000.
+
+- [Python - Spotipy](https://spotipy.readthedocs.io/en/2.22.1/)
 
 ## Dashboard
 image here 
@@ -30,6 +35,8 @@ image here
 ## Detailed Explanation
 
 To run this project, you would need to:
+
+1. Create an app in Spotify Developer Dashboard.
 
 1. Install the required Python packages: 
     ```
