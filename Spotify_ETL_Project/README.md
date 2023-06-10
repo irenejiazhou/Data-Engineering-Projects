@@ -22,6 +22,11 @@ The data pipeline architecture is based on [Darshil's work](https://github.com/d
 
 - [Python - Spotipy](https://spotipy.readthedocs.io/en/2.22.1/)
 
+### Transform
+
+
+### Load
+
 ## Dashboard
 image here 
 
