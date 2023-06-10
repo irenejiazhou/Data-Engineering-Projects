@@ -10,7 +10,7 @@ The data pipeline architecture is based on [Darshil's work](https://github.com/d
 
 ## Data Source
 [Top Song - Global](https://open.spotify.com/playlist/37i9dQZEVXbNG2KDcFcKOF)
-<img src="Spotify_ETL_Project/Others/Spotify_Top_Songs_Global.png"  width="600" height="300">
+<img src="[Spotify_ETL_Project/Others/Spotify_Top_Songs_Global.png](https://github.com/irenejiazhou/Data-Engineering-Projects/blob/68cfcdb5ee6cd76283832678a95ac85b14316697/Spotify_ETL_Project/Others/Spotify_Top_Songs_Global.png)">
 
 
 ## ETL Architecture
