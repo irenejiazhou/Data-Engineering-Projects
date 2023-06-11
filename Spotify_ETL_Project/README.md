@@ -17,7 +17,7 @@ The data pipeline architecture is based on [Darshil's work](https://github.com/d
 
 
 ## Data Source
-[Spotify - Top Song - Global "Your <b>weekly</b> update of the most played tracks right now."](https://open.spotify.com/playlist/37i9dQZEVXbNG2KDcFcKOF)
+[Spotify - Top Song - Global "Your <b>WEEKLY</b> update of the most played tracks right now."](https://open.spotify.com/playlist/37i9dQZEVXbNG2KDcFcKOF)
 <br>
 <img src="https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Spotify_ETL_Project/Others/Spotify_Top_Songs_Global.png"  width="40%" height="40%">
 
