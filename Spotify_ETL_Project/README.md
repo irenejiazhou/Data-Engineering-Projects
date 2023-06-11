@@ -1,42 +1,47 @@
 # Spotify API Music Data Pipeline Using AWS
 
-## Overview
+## Business Requirements
 This project is an implementation of a data pipeline to collect and store music data from the Spotify API. The aim is to gather data about songs, albums, and artists to conduct a deep analysis and get insights into the music trends and preferences.
-
 The data pipeline architecture is based on [Darshil's work](https://github.com/darshilparmar/python-for-data-engineering/tree/main/6.%20End-To-End%20Data%20Pipeline%20Project), but it has been adjusted according to my professional experience with data warehouse design. The core steps include data extraction from Spotify API and data transformation.
 
-## Business Requirement
+## ETL Architecture
+
+
+- Data Ingestion: [Spotify API](https://developer.spotify.com/dashboard)
+
+  `Redirect URIs: http://localhost:3000.`
+
+- Data Extract: [Python - Spotipy](https://spotipy.readthedocs.io/en/2.22.1/)
+
+
+
 
 ## Data Source
 [Spotify - Top Song - Global](https://open.spotify.com/playlist/37i9dQZEVXbNG2KDcFcKOF)
 <br>
 <img src="https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Spotify_ETL_Project/Others/Spotify_Top_Songs_Global.png"  width="40%" height="40%">
 
+Your weekly update of the most played tracks right now - Global.
 
-## ETL Architecture
-### Extract
-- [Spotify API](https://developer.spotify.com/dashboard)
-
-  Redirect URIs: http://localhost:3000.
-
-- [Python - Spotipy](https://spotipy.readthedocs.io/en/2.22.1/)
-
-### Transform
+Update Frequency:
+数据量
+domains
+获取机制： on-demand
+加载方式：全量、增量
+取数逻辑
 
 
-### Load
 
 ## Dashboard
-image here 
 
-## Metrics Monitored
+## Key Metrics
 
-## Project Structure
+
 
 - [`ETL_Project_Spotify_API.ipynb`](https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Spotify_ETL_Project/ETL_Project_Spotify_API.ipynb): The main driver script that coordinates the execution of the pipeline.
 - `data_extraction.py`: This script handles the data extraction process from the Spotify API.
 
-## Detailed Explanation
+## Project Highlights
 
 To run this project, you would need to:
 
