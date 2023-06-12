@@ -67,8 +67,9 @@ Our primary focus of study is the song entity, so we will disregard the relation
 <img src="https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Spotify_ETL_Project/Others/Spotify_ETL_Project_Tables.png"  width="50%" height="50%">
 
 ## Data Processing Highlights
+<h3>Troubleshooting</h3>
 
-- Problem: The column names of song_artist_data and artist tables are not recognized by the crawler.
+- The column names in the song_artist_data and artist tables are not being correctly identified by the AWS Glue crawler.
   1. Rename Field Names: `AWS Glue -> Tables -> song_artist_data -> Edit schema as JSON`
   2. Skip the First Row: `AWS Glue -> Tables -> song_artist_data -> Actions -> Edit Table -> Table Properties`
 
@@ -76,15 +77,17 @@ Our primary focus of study is the song entity, so we will disregard the relation
       | :--------------------- | :---- |
       | skip.header.line.count | 1     |
 
-- Problem: There are album and song names contains `,`, which means there will be bugs when use `,` as delimiter in the csv files.
-  1. Search possible delimiters in the raw JSON file, and `;` doesn't appear.
+- Certain album and song names contain `,`, which cause parsing issues when using a `,` as a delimiter in CSV files.
+  1. Evaluate the raw JSON data for potential delimiters that do not occur within the data. The semicolon character `;` doesn't appear within the dataset.
   2. Change the delimiter from `,` to `;`
   
       ```
       song_buffer = StringIO() # CREATE AN IN-MEMORY BUFFER where the CSV file can be written.
       song_df.to_csv(song_buffer, sep = ';', index = False) # No index col for the result table
       ```
-- Partition Rule: Since the upstream data is updated weekly, our tables will also be updated in the same frequency.
+<h3>Partitioning</h3>
+Given that the source data is updated on a weekly basis, our derived tables will follow the same update frequency for consistency and to ensure our data remains current.
+
   ```
   current_year = str(datetime.now().year)
   current_month = str(datetime.now().month)
