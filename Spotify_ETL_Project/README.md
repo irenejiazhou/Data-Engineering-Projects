@@ -19,6 +19,8 @@ The data pipeline architecture is based on [Darshil's work](https://github.com/d
 
 
 ## ETL Architecture
+<img src="https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Spotify_ETL_Project/Others/Spotify_Top_Songs_Global.png"  width="30%" height="30%">
+
 - [<b>Spotify API</b>](https://developer.spotify.com/dashboard)
   - `Redirect URIs: http://localhost:3000.`
 
@@ -28,7 +30,7 @@ The data pipeline architecture is based on [Darshil's work](https://github.com/d
   - [<b>Python - Spotipy</b>](https://spotipy.readthedocs.io/en/2.22.1/)
   <br> The Spotipy library is incorporated into a Lambda layer for fetching data from the Spotify API.
  
-- <b>AWS S3</b>
+- <b>Amazon S3</b>
 <br> Serves as a data lake for storing raw data as JSON files and processed data as CSV files. 
 
 - <b>AWS Glue/Data Catalog</b>
