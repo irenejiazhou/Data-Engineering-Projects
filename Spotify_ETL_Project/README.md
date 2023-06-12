@@ -60,6 +60,7 @@ Since the major research entity is song, we will ignore the relationship between
 - Artist Table
 - Song Artist Mapping Table
 
+<img src="https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Spotify_ETL_Project/Others/Spotify_ETL_Project_Tables.png"  width="30%" height="30%">
 
 ## Project Structure
 
