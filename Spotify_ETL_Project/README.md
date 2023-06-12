@@ -38,6 +38,8 @@ The data pipeline architecture is based on [Darshil's work](https://github.com/d
   - <b>Crawler</b>
   <br> Scheduled to update the database with the latest processed data from S3 on a weekly basis.
     - Update Schedule: Every Monday at 10 PM
+  - Tables
+  <br> Edit the table schema and transformation rules.
   
 - <b>Amazon Athena</b>
 <br> Allows inspection of the schema and validation of data quality in the tables loaded into the database.
