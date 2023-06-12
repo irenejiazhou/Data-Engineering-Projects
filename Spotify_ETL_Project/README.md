@@ -12,7 +12,7 @@ The data pipeline architecture is based on [Darshil's work](https://github.com/d
 | Update Info             | Details             |
 | :---------------------- | :------------------ |
 | <b>Update Frequency</b> | Weekly              |
-| <b>Amount of Data</b>   | 50 Rows             |
+| <b>Amount of Data</b>   | 50 Songs            |
 | <b>Domains</b>          | Song, Album, Artist |
 | <b>Loading Method</b>   | Full Load           |
 | <b>Partitioning</b>     | Year & Week         |
@@ -48,6 +48,17 @@ The data pipeline architecture is based on [Darshil's work](https://github.com/d
 <br> Set to trigger the `spotify_transformation_load` Lambda function immediately after the execution of the extraction Lambda function.
 
 ## Database Design
+As the hiearchy levels shown in the json file,
+- One album can have multiple songs, but one song only have one album. `1:N`
+- One song can have multiple artists, and one artists can have multiple songs. `N:N`
+- One album can have multiple artists, and one artist can have multiple albums. `N:N`
+
+Since the major research entity is song, we will ignore the relationship between album and artist here.
+<br> Thus, there should be 4 operational data tables in this case:
+- Song Table
+- Album Table
+- Artist Table
+- Song Artist Mapping Table
 
 
 ## Project Structure
@@ -73,3 +84,10 @@ The data pipeline architecture is based on [Darshil's work](https://github.com/d
       song_buffer = StringIO() # CREATE AN IN-MEMORY BUFFER where the CSV file can be written.
       song_df.to_csv(song_buffer, sep = ';', index = False) # No index col for the result table
       ```
+- Partition Rule: Since the upstream data is updated weekly, our tables will also be updated in the same frequency.
+  ```
+  current_year = str(datetime.now().year)
+  current_month = str(datetime.now().month)
+  song_key = 'transformed_data/song_data/' + current_year + '/' + current_month + '/' + 'song_transformed_' + str(datetime.now()) + '.csv'
+  # Create a folder for each year and create week folders inside each year.
+  ```
