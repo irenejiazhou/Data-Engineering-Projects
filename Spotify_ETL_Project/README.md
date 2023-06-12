@@ -31,7 +31,7 @@ The data pipeline architecture is based on [Darshil's work](https://github.com/d
 - <b>AWS S3</b>
 <br> Serves as a data lake for storing raw data as JSON files and processed data as CSV files. 
 
-- <b>AWS Glue-Data Catalog</b>
+- <b>AWS Glue/Data Catalog</b>
 <br> Provides a database for storing processed tables.
   - <b>Crawler</b>
   <br> Scheduled to update the database with the latest processed data from S3 on a weekly basis.
