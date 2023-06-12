@@ -19,7 +19,7 @@ The data pipeline architecture is based on [Darshil's work](https://github.com/d
 
 
 ## ETL Architecture
-<img src="https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Spotify_ETL_Project/Others/Spotify_ETL_Architecture.png"  width="30%" height="30%">
+<img src="https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Spotify_ETL_Project/Others/Spotify_ETL_Architecture.png"  width="70%" height="70%">
 
 - [<b>Spotify API</b>](https://developer.spotify.com/dashboard)
   - `Redirect URIs: http://localhost:3000.`
