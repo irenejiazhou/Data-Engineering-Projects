@@ -66,12 +66,6 @@ Our primary focus of study is the song entity, so we will disregard the relation
 
 <img src="https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Spotify_ETL_Project/Others/Spotify_ETL_Project_Tables.png"  width="50%" height="50%">
 
-
-## Project Structure
-
-- [`ETL_Project_Spotify_API.ipynb`](https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Spotify_ETL_Project/ETL_Project_Spotify_API.ipynb): The main driver script that coordinates the execution of the pipeline.
-- `data_extraction.py`: This script handles the data extraction process from the Spotify API.
-
 ## Data Processing Highlights
 
 - Problem: The column names of song_artist_data and artist tables are not recognized by the crawler.
