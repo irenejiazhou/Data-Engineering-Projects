@@ -48,13 +48,13 @@ The data pipeline architecture is based on [Darshil's work](https://github.com/d
 <br> Set to trigger the `spotify_transformation_load` Lambda function immediately after the execution of the extraction Lambda function.
 
 ## Database Design
-As the hiearchy levels shown in the json file,
+Based on the hierarchy levels evident in the JSON file, the relationships between the entities are as follows:
 - One album can have multiple songs, but one song only have one album. `1:N`
 - One song can have multiple artists, and one artists can have multiple songs. `N:N`
 - One album can have multiple artists, and one artist can have multiple albums. `N:N`
 
-Since the major research entity is song, we will ignore the relationship between album and artist here.
-<br> Thus, there should be 4 operational data tables in this case:
+Our primary focus of study is the song entity, so we will disregard the relationship between albums and artists for this analysis.
+<br> Thus, tin order to properly represent these relationships in our data model, we need to create four operational data tables:
 - Song Table
 - Album Table
 - Artist Table
