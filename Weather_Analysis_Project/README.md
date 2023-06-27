@@ -27,6 +27,8 @@ This project serves as a data-driven exploration of weather patterns in Blooming
 
 <img src="https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Weather_Analysis_Project/Others/openmeteo_preview.png"  width="50%" height="50%">
 
+[Bloomington, IN Natural Disasters and Weather Extremes](http://www.usa.com/bloomington-in-natural-disasters-extremes.htm)
+
 # ETL Overview
 <img src="https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Weather_Analysis_Project/Others/etl_architecture.png"  width="60%" height="60%">
 
