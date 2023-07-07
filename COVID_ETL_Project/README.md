@@ -13,10 +13,16 @@ By analyzing historical data, this project aims to identify trends and changes i
 
 # Data Source
 - [AWS - A public data lake for COVID-19 research and development](https://aws.amazon.com/covid-19-data-lake/)
-
-
-  <img src="https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Weather_Analysis_Project/Others/bloomington_extreme_weather.png"  width="50%" height="50%">
-
+  - AWS provides a public data lake with 39 raw tables sourced from 10+ contributors.
+  - The data is formatted as `JSON` and `CSV` files.
+  - Primary entities in this dataset:
+    - Demographics: Country, State, County
+    - Time Unit: Date, Week, Month, Year
+    - Vaccination
+    - Hospital Bed
+    - COVID-19 Tracing System User
+    - COVID-19 Test Case
+- 
 
 # ETL Overview
 <img src="https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Weather_Analysis_Project/Others/etl_architecture.png"  width="60%" height="60%">
@@ -31,7 +37,7 @@ By analyzing historical data, this project aims to identify trends and changes i
 
 
 
-# Data Processing Highlights
+# Troubleshooting Highlights
 
 
 
