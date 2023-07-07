@@ -17,7 +17,7 @@ By analyzing historical data, this project aims to identify trends and changes i
     - Demographics: State, City, County
     - Time Unit: Date, Week, Month, Year
     - Vaccination
-    - Hospital & Hospital Bed
+    - Hospital
     - COVID-19 Tracing System User
     - COVID-19 Test Case
 - I have also constructed a <b>data dictionary</b>, available here:
