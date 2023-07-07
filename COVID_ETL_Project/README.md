@@ -27,7 +27,7 @@ By analyzing historical data, this project aims to identify trends and changes i
   [`covid_19_db_data_dictionary.xlsx`](https://github.com/irenejiazhou/Data-Engineering-Projects-Public/blob/main/COVID_ETL_Project/covid_19_db_data_dictionary.xlsx), which collates the metadata from the raw data.
 
 # ETL Overview
-<img src="https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Weather_Analysis_Project/Others/etl_architecture.png"  width="60%" height="60%">
+<img src="https://github.com/irenejiazhou/Data-Engineering-Projects-Public/blob/main/COVID_ETL_Project/images/covid_etl.jpeg"  width="90%" height="90%">
 
 - [weather_history_report.ipynb](https://github.com/irenejiazhou/Data-Engineering-Projects-Public/blob/main/Weather_Analysis_Project/weather_history_report.ipynb)
 
