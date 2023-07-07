@@ -12,8 +12,8 @@ By analyzing historical data, this project aims to identify trends and changes i
 # Data Source
 - [AWS - A public data lake for COVID-19 research and development](https://aws.amazon.com/covid-19-data-lake/)
   - AWS provides a public data lake with 39 raw tables sourced from 10+ contributors.
-  - The data is formatted as `JSON` and `CSV` files.
-  - Primary entities in this dataset:
+  - The data is formatted as <b>JSON</b> and <b>CSV</b> files.
+  - Primary entities in this dataset
     - Demographics: Country, State, County
     - Time Unit: Date, Week, Month, Year
     - Vaccination
@@ -36,12 +36,20 @@ By analyzing historical data, this project aims to identify trends and changes i
 
 - ODS (Operational Data Store)
 
-  This layer stores the raw tables extracted from AWS public S3 bucket.
-  
-- DWC (Data Warehouse Core)
-- DWS (Data Warehouse Staging)
-- DWT (Data Warehouse Target)
+  This layer stores the raw tables that are extracted from the AWS public S3 bucket.
+
+- EDW (Enterprise Data Warehouse)
+  - DWD (Data Warehouse Detail)
+
+    This layer holds the data that has been essentially processed from the ODS layer, which includes operations such as cleaning, filtering, etc. The data is structured with a star schema and contains two types of tables: fact and dimension tables.
+
+  - DWS (Data Warehouse Service)
+    
+    This layer houses the data that has been aggregated from the DWD layer.
+    
 - ADS (Application Data Store)
+
+  This layer acts as a mapping of result tables in the EDW layer.
 
 # Data Processing Rules
 
@@ -59,4 +67,5 @@ By analyzing historical data, this project aims to identify trends and changes i
 
 
 # References
+[Flink Is Attempting to Build a Data Warehouse Simply by Using a Set of SQL Statements](https://alibaba-cloud.medium.com/flink-is-attempting-to-build-a-data-warehouse-simply-by-using-a-set-of-sql-statements-57757badbb3f)
 
