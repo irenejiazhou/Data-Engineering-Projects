@@ -24,14 +24,24 @@ By analyzing historical data, this project aims to identify trends and changes i
 
   [`covid_19_db_data_dictionary.xlsx`](https://github.com/irenejiazhou/Data-Engineering-Projects-Public/blob/main/COVID_ETL_Project/covid_19_db_data_dictionary.xlsx), which collates the metadata from the raw data.
 
-# ETL Overview
+# ELT Overview
 <img src="https://github.com/irenejiazhou/Data-Engineering-Projects-Public/blob/main/COVID_ETL_Project/images/covid_etl.jpeg"  width="90%" height="90%">
 
-- [weather_history_report.ipynb](https://github.com/irenejiazhou/Data-Engineering-Projects-Public/blob/main/Weather_Analysis_Project/weather_history_report.ipynb)
+- Extract
+- Load
+- Transform
 
-  This jupyter notebook is used in Amazon Databricks to Load data from 
 
+# Data Warehouse Layers
 
+- ODS (Operational Data Store)
+
+  This layer stores the raw tables extracted from AWS public S3 bucket.
+  
+- DWC (Data Warehouse Core)
+- DWS (Data Warehouse Staging)
+- DWT (Data Warehouse Target)
+- ADS (Application Data Store)
 
 # Data Processing Rules
 
