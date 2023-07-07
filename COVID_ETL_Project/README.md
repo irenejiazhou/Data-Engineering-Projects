@@ -45,6 +45,7 @@ By analyzing historical data, this project aims to identify trends and changes i
     - Processing Rules
 
       1. Clean the format of times
+      2. TBD...
     
 
   - <b>DWS (Data Warehouse Service)</b>
