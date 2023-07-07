@@ -34,28 +34,30 @@ By analyzing historical data, this project aims to identify trends and changes i
 
 # Data Warehouse Layers
 
-- ODS (Operational Data Store)
+- <b>ODS (Operational Data Store)</b>
 
   This layer stores the raw tables that are extracted from the AWS public S3 bucket.
 
-- EDW (Enterprise Data Warehouse)
-  - DWD (Data Warehouse Detail)
+- <b>EDW (Enterprise Data Warehouse)</b>
+  - <b>DWD (Data Warehouse Detail)</b>
+    - This layer holds the data that has been essentially processed from the ODS layer, which includes operations such as cleaning, filtering, etc. The data is structured with a star schema and contains two types of tables: fact and dimension tables.
 
-    This layer holds the data that has been essentially processed from the ODS layer, which includes operations such as cleaning, filtering, etc. The data is structured with a star schema and contains two types of tables: fact and dimension tables.
+    - Processing Rules
 
-  - DWS (Data Warehouse Service)
+      1. Clean the format of times
+    
+
+  - <b>DWS (Data Warehouse Service)</b>
     
     This layer houses the data that has been aggregated from the DWD layer.
     
-- ADS (Application Data Store)
+- <b>ADS (Application Data Store)</b>
 
   This layer acts as a mapping of result tables in the EDW layer.
 
-# Data Processing Rules
-
-
 
 # Troubleshooting Highlights
+When connecting to Redshift, we need to make sure that:
 
 
 
