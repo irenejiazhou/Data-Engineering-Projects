@@ -45,7 +45,8 @@ By analyzing historical data, this project aims to identify trends and changes i
     - Processing Rules
 
       1. Clean the format of times
-      2. TBD...
+      2. zipcode starting with 0 is missing the first digit because the data type is num.
+      3. TBD...
     
 
   - <b>DWS (Data Warehouse Service)</b>
@@ -86,7 +87,7 @@ By analyzing historical data, this project aims to identify trends and changes i
         'EncryptionConfiguration': {'EncryptionOption': 'SSE_S3'}})
    ```
 
-   <b>ASYNCHRONOUSLY</b> means if the task takes a long time, the start_query_execution method will start the task and then continue to run the rest of this Jupyter notebook, which means even if the query is not completed, the script on Jupyter Notebook still shows it is exceuted successfully. The following script checks if the query is successfully executed, succeed, running, or failed. If not, what's the error type?
+   <b>ASYNCHRONOUSLY</b> means if the task takes a long time, the start_query_execution method will start the task and then continue to run the rest of this Jupyter notebook, which means even if the query is not completed, the script on Jupyter Notebook still shows it is executed successfully. The following script checks if the query is successfully executed, succeed, running, or failed. If not, what's the error type?
     ```
     # Retrieve the QueryExecutionId from the response of the start_query_execution method
     query_execution_id = query_world_cases_deaths_testing['QueryExecutionId']
