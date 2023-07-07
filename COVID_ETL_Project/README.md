@@ -22,7 +22,9 @@ By analyzing historical data, this project aims to identify trends and changes i
     - Hospital Bed
     - COVID-19 Tracing System User
     - COVID-19 Test Case
-- 
+- I have also constructed a <b>data dictionary</b>, available here:
+
+  [`covid_19_db_data_dictionary.xlsx`](https://github.com/irenejiazhou/Data-Engineering-Projects-Public/blob/main/COVID_ETL_Project/covid_19_db_data_dictionary.xlsx), which collates the metadata from the raw data.
 
 # ETL Overview
 <img src="https://github.com/irenejiazhou/Data-Engineering-Projects/blob/main/Weather_Analysis_Project/Others/etl_architecture.png"  width="60%" height="60%">
