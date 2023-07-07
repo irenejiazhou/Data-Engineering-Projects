@@ -57,17 +57,48 @@ By analyzing historical data, this project aims to identify trends and changes i
 
 
 # Troubleshooting Highlights
-When connecting to Redshift, we need to make sure that:
 
+1. When connecting to Redshift, we need to make sure that:
 
+   - Cluster: `Network and security settings` -> `Publicly accessible` -> `Enabled`
+   - VPC dashboard: `Security` -> `Security groups` -> `Inbound rules` -> `Edit inbound rules` -> `Add rule`
+     - If we use <b>online platforms</b> like Databricks to run the Jupiter notebook,
+       - Type: Redshift
+       - Protocol: TCP
+       - Port Range: 5439
+       - Source: Anywhere-IPv4
+     - If we use a <b>local machine</b> to run it,
+       - Type: Redshift
+       - Protocol: TCP
+       - Port Range: 5439
+       - Source: My IP 
 
+2. Check If the Extraction Query from Athena is Finished (1.4.1 in [`part_1_covid_etl_full_project.ipynb`](https://github.com/irenejiazhou/Data-Engineering-Projects-Public/blob/main/COVID_ETL_Project/part_1_covid_etl_full_project.ipynb))
 
+   The following query is executed ASYNCHRONOUSLY.
+   ```
+   query_cdc_moderna_vaccine_distribution = athena_client.start_query_execution(
+    QueryString = 'SELECT * FROM cdc_moderna_vaccine_distribution',
+    QueryExecutionContext = {'Database': athena_db_name},
+    ResultConfiguration = { 
+        'OutputLocation': s3_raw_data_dir,
+        'EncryptionConfiguration': {'EncryptionOption': 'SSE_S3'}})
+   ```
 
-
-
-
-
-
+   <b>ASYNCHRONOUSLY</b> means if the task takes a long time, the start_query_execution method will start the task and then continue to run the rest of this Jupyter notebook, which means even if the query is not completed, the script on Jupyter Notebook still shows it is exceuted successfully. The following script checks if the query is successfully executed, succeed, running, or failed. If not, what's the error type?
+    ```
+    # Retrieve the QueryExecutionId from the response of the start_query_execution method
+    query_execution_id = query_world_cases_deaths_testing['QueryExecutionId']
+    # Get the query execution details
+    query_execution = athena_client.get_query_execution(QueryExecutionId=query_execution_id)
+    # If the query execution status is 'FAILED', print the error message
+    if query_execution['QueryExecution']['Status']['State'] == 'FAILED':
+        print('Query failed with the following error:')
+        print(query_execution['QueryExecution']['Status']['StateChangeReason'])
+    else:
+        print('Query status:', query_execution['QueryExecution']['Status']['State'])
+    ```
+    
 # References
 [Flink Is Attempting to Build a Data Warehouse Simply by Using a Set of SQL Statements](https://alibaba-cloud.medium.com/flink-is-attempting-to-build-a-data-warehouse-simply-by-using-a-set-of-sql-statements-57757badbb3f)
 
