@@ -23,6 +23,7 @@ By analyzing historical data, this project aims to identify trends and changes i
 - I have also constructed a <b>data dictionary</b>, available here:
 
   [`covid_19_db_data_dictionary.xlsx`](https://github.com/irenejiazhou/Data-Engineering-Projects-Public/blob/main/COVID_ETL_Project/covid_19_db_data_dictionary.xlsx), which collates the metadata from the raw data.
+- For the covidcast_data table, the official data dictionary document is [here](https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/hhs.html)
 
 # ELT Overview
 <img src="https://github.com/irenejiazhou/Data-Engineering-Projects-Public/blob/main/COVID_ETL_Project/images/covid_etl.jpeg"  width="90%" height="90%">
